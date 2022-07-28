@@ -10,7 +10,7 @@ bool is_fanarray(int array[], int n)
     int number=(n/2);
 
     if (n<1){
-        isFan=false;
+        return 0;
     }
 
     for (int i = 1; i < number; i++)
