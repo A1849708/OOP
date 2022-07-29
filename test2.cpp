@@ -1,9 +1,11 @@
 #include <iostream>
-#include <cmath>
+using namespace std;
+int main (void){
 
-int median_array(int array[], int n){
-       
-int element=0;
+    int array[8]={19, 20, 16, 5, 8, 1, 7, 11};
+    int n =8;
+
+    int element=0;
     int min=array[0];
     int max=array[0];
     int difference;
@@ -11,11 +13,8 @@ int element=0;
     int temp=0;
     int median=(n/2);
     int medianEven=((n/2)-1);
+    cout<<medianEven<<endl;
     int result=0;
-
-    if (n<1){
-        return 0;
-    }
 
     for (int i=count;i<n;i++){
         if (array[i]>=max){
@@ -38,13 +37,14 @@ int element=0;
         count++;
     }
 
-    if (n%2!=0){
+if (n%2!=0){
         result= array[median];
-        return result;
+        cout<< result;
     }
     else {
         result=((array [median]+array [medianEven])/2);
-        return result;
+        cout<< result;
     }
     
 }
+

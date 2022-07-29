@@ -7,10 +7,10 @@ bool is_fanarray(int array[], int n)
     int benchmark = array[0];
     int count = 1;
     int arrayCount = 0;
-    int number=(n/2);
+    int number=((n+1)/2);
 
     if (n<1){
-        return 0;
+        isFan= false;
     }
 
     for (int i = 1; i < number; i++)
@@ -22,12 +22,13 @@ bool is_fanarray(int array[], int n)
         }
         else
         {
-            return false;
+            isFan= false;
         }
     }
+
     if (count == number)
     {
-        for (int i = 0; i < n/2; i++)
+        for (int i = 0; i < n; i++)
         {
             if (array[i] == array[n - i - 1])
             {
@@ -35,10 +36,10 @@ bool is_fanarray(int array[], int n)
             }
             else
             {
-                return false;
+                isFan= false;
             }
         }
-        if (arrayCount == n/2)
+        if (arrayCount == n)
         {
             isFan = true;
         }
