@@ -2,37 +2,48 @@
 
 using namespace std;
 
-void array_min(int integers[], int length){
-    int min=integers[0];
-    for (int i=0;i<length;i++){
-        if (integers[i]<min){
-            min=integers[i];
+bool is_palindrome(int integers[], int length)
+{
+    bool isPalindrome=true;
+
+    for (int i = 0; i < length; i++){
+        if (integers[i]==integers[length-i-1]){
+            isPalindrome=true;
+        }
+        else{
+            isPalindrome=false;
         }
     }
-    cout<<min<<endl;
+    return isPalindrome; 
 }
 
-void array_max(int integers[], int length){
-    int max=integers[0];
-    for (int i=0;i<length;i++){
-        if (integers[i]>max){
-            max=integers[i];
-        }
-    }
-    cout<<max<<endl;
-}
-
-int main (){
-    int integers[5]={1,2,10,22,3};
-    int length=5;
-    if (length<1){
-        return -1;
-    }
-
+int sum_array_elements(int integers[], int length){
     int sum=0;
-    //sum=sum+array_min(integers,length)+array_max(integers,length);
-    cout<<sum<<endl;
 
-    array_min(integers,length);
+    for (int i=0;i<length;i++){
+        sum=sum+integers[i];
+    }
+    return sum;
+}
 
+int main (void){
+    int result;
+    int integers[5]={1,2,3,4,5};
+    int length =5;
+
+    if (length<1){
+        result= -1;
+        //cout<<result<<endl;
+    }
+
+    if (is_palindrome(integers,length)==true){
+        result=sum_array_elements(integers,length);
+        //cout<<result<<endl;
+    }
+    else if (is_palindrome(integers,length)==false){
+        result =-2;
+        //cout<<result<<endl;
+    }
+
+    cout<<result<<endl;
 }

@@ -49,5 +49,5 @@ void count_digits(int array[4][4]){
             }             
         }
     }
-    cout<<"0:"<<count<<";1:"<<count1<<";2:"<<count2<<";3:"<<count3<<";4:"<<count4<<";5:"<<count5<<";6:"<<count6<<";7:"<<count7<<";8:"<<count8<<";9:"<<count9<<endl;
+    cout<<"0:"<<count<<";1:"<<count1<<";2:"<<count2<<";3:"<<count3<<";4:"<<count4<<";5:"<<count5<<";6:"<<count6<<";7:"<<count7<<";8:"<<count8<<";9:"<<count9<<";"<<endl;
 }
