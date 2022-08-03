@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void count_digits(int array[10][10]){
+void count_digits(int array[4][4]){
     int count=0; 
     int count1=0; 
     int count2=0; 
@@ -13,8 +13,8 @@ void count_digits(int array[10][10]){
     int count7=0; 
     int count8=0; 
     int count9=0; 
-    for (int i=0;i<10;i++){
-        for (int j=0;j<10;j++){
+    for (int i=0;i<4;i++){
+        for (int j=0;j<4;j++){
             switch (array[i][j]){
                 case 0:
                     count++;
