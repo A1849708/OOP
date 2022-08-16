@@ -9,8 +9,4 @@ void copy_integers(int old_array[],int new_array[],int length){
     for (int i=0;i<length;i++){
         *(ptrNew+i)=*(ptrOld+i);
     }
-
-    for (int i=0;i<length;i++){
-        cout<<new_array[i]<<endl;
-    }
 }
