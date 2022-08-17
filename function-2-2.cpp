@@ -6,7 +6,7 @@ int max_sub_sum(int *nums,int length){
     int sum=0;
     int count=0;
     int max=*nums;
-    int negCount;
+    int negCount=0;
 
     if(length<1){
         max=0;
@@ -29,11 +29,11 @@ int max_sub_sum(int *nums,int length){
             max=*(nums+length-1);
         }
         for (int i=0;i<length;i++){
-            if (*(num+i)<0){
+            if (*(nums+i)<0){
                 negCount++;
             }
         }
-        if (negCount==length-1){
+        if (negCount==length){
             max=0;
         }
 
