@@ -2,8 +2,20 @@
 
 using namespace std;
 
-int *readNumbers(int nums){
-    int *numbers=new int (10);
-    *numbers=nums;
-    return numbers;
+int *readNumbers(){
+    int *nums=new int (10);
+    int length =10;
+    for (int i=0;i<10;i++){
+        cout<<"["<<i<<"]";
+        cout<<"enter a number";
+        cin>>*(nums+i);
+    }
+    return nums;
+}
+
+void printNumbers(int* numbers, int length){
+    for (int i=0;i<length;i++){
+        cout<<i<<" "<<*(numbers+i);
+    }
+    delete[] numbers;
 }
