@@ -2,11 +2,13 @@
 
 using namespace std;
 
-extern int *readNumbers(int nums);
+extern int *readNumbers();
 extern void printNumbers(int *numbers,int length);
 
 int main (){
-    *readNumbers();
-    printNumbers(*numbers,10);
+    int *p = readNumbers();
+    int length = 10;
+    printNumbers(p,length);
     return 0;
 }
+
