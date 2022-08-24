@@ -10,8 +10,9 @@ int main (){
     int row3[]={23,56,-10};
     int *vals[]={row1,row2,row3};
     int *pointer=matrix_min_max(vals,3,3);
+    int val=*pointer;
+    int val1=*(pointer+1);
 
-    cout<<*pointer<<endl;
-    cout<<*(pointer+1)<<endl;
+    cout<<"{"<<val<<","<<val1<<"}"<<endl;
     return 0;
 }
