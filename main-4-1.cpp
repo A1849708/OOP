@@ -11,6 +11,7 @@ int main (){
     int *vals[]={row1,row2,row3};
     int *pointer=matrix_min_max(vals,3,3);
 
+    cout<<*pointer<<endl;
     cout<<*(pointer+1)<<endl;
     return 0;
 }
