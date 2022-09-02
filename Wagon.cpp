@@ -1,24 +1,26 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Capybara.h"
 #include "Wagon.h"
 
 using namespace std;
 
 Wagon::Wagon(){
-    full=false;
-    count=0;
-};
+    array;
+}
 
 bool Wagon::addCapybara(Capybara newCapy){
-    if (*****************){
-        count++;
+    if (array.size()<4){
+        array.push_back(newCapy);
+        return true;
     }
-    if (count>4);
-    full=true;
-    return full;
-};  
-void Wagon::emptyWagon(){count=0;}
+    return false;
+    }
+void Wagon::emptyWagon(){array.clear();return;}
+
 void Wagon::printCapybaras(){
-    cout<<newCapy.nAge<<" "<<newCapy.nName<<endl;
+    for (int i=0;i<array.size();i++){
+        cout<<array[i].getName()<<" "<<array[i].getAge()<<endl;
+    }
 } 

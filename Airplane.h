@@ -3,16 +3,20 @@
 #include <string>
 #include "Person.h"
 
-class Airplane{
+using namespace std;
+
+class Airplane: public Person{
     private:
-        string pilot;
-        string coPilot;
+        string flight;
+        Person one;
+        Person two;
     public:
-Airplane();
-    void setPilot(string thePilot);     
-    void setCoPilot(string theCoPilot);  
-    string getPilot();
-    string getCoPilot();
-    void printDetails();   
+        Airplane();
+        Airplane(string newChange, Person pilot, Person coPilot);
+        void setPilot(Person pilot);     
+        void setCoPilot(Person coPilot);  
+        Person getPilot();
+        Person getCoPilot();
+        void printDetails();   
 };
 #endif

@@ -5,17 +5,23 @@
 using namespace std;
 
 Airplane::Airplane(){
-    pilot="uvawewe";
-    coPilot="ozaz";
-};
+    flight=" ";
+}
 
-void Airplane::setPilot(string thePilot){pilot=thePilot;}
-void Airplane::setCoPilot(string theCoPilot){coPilot=theCoPilot;}  
+Airplane::Airplane(string newChange, Person pilot, Person coPilot){
+    flight=newChange;
+    one=pilot;
+    two=coPilot;
+}
 
-string Airplane::getPilot(){return coPilot;}
-string Airplane:: getCoPilot(){return pilot;}
+void Airplane::setPilot(Person pilot){one=pilot;}
+void Airplane::setCoPilot(Person coPilot){two=coPilot;}
+
+Person Airplane::getPilot(){return one;}
+Person Airplane:: getCoPilot(){return two;}
 
 void Airplane:: printDetails(){
-    cout<<pilot<<endl;
-    cout<<coPilot<<endl;
+    cout<<flight<<endl;
+    cout<<one.getName()<<endl;
+    cout<<one.getName()<<endl;
 }

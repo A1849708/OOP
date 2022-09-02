@@ -4,8 +4,13 @@
 using namespace std;
 
 Person::Person(){
-    name=" ";
-    salary=0;
+    name = " ";
+    salary = 0;
+}
+
+Person:: Person(int mySalary, string myName){
+    name= myName;
+    salary = mySalary;
 };
 
 void Person::setName(string myName){name=myName;}

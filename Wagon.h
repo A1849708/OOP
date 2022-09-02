@@ -2,16 +2,16 @@
 #define WAGON_H
 #include "Capybara.h"
 #include <string>
+#include <vector>
 using namespace std;
 
-class Wagon{
+class Wagon: public Capybara{
 
     private:
-        bool full=false;
-        int count=0;
-        int array[4];
+        int count;
 
     public:
+        vector<Capybara>array;
         Wagon();                               
         bool addCapybara(Capybara newCapy);
         void emptyWagon();                    

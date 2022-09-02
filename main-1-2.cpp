@@ -5,8 +5,8 @@ using namespace std;
 
 int main(){
 
-    Person one;
-    one.setName("Piggle");
+    Person one(1,"alex");
+    one.setName("big boy");
     one.setSalary(55);
 
     cout<<one.getName()<<endl;
