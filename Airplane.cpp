@@ -23,5 +23,5 @@ Person Airplane:: getCoPilot(){return two;}
 void Airplane:: printDetails(){
     cout<<flight<<endl;
     cout<<one.getName()<<endl;
-    cout<<one.getName()<<endl;
+    cout<<two.getName()<<endl;
 }
