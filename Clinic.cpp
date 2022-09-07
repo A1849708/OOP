@@ -16,24 +16,28 @@ Clinic::Clinic(string name, int max_size){
     clinicName=name;
     size=max_size;
     clinicArray = new Cage [size];
-}        
-
-int Clinic::get_number_of_cages(){return count;}             
+    count=0;
+}            
 
 string Clinic::get_name(){return clinicName;} 
 
 Cage* Clinic::get_cages(){return clinicArray;}
 
 bool Clinic::add_cage(Cage new_cage){
-    if (count>size){
+    if (count>=size){
         return false;
     }
-    else {
+    else if (count<size){
        *(clinicArray + count) = new_cage;
         count++;
         return true;
     }
     return true;
-}               
+}       
 
-//Clinic::~Clinic();            
+int Clinic::get_number_of_cages(){return count;}       
+
+Clinic::~Clinic(){
+    delete[] clinicArray;
+}
+         

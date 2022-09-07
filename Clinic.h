@@ -19,6 +19,6 @@ class Clinic : public Cage{
         string get_name();                        
         Cage * get_cages();                           
         bool add_cage(Cage new_cage);                
-        //~Clinic();                                     
+        ~Clinic();                                     
 };
 #endif
