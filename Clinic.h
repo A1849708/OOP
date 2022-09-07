@@ -9,8 +9,9 @@ class Clinic : public Cage{
     private:
         int count;
         int size;
+        Cage* clinicArray;
         string clinicName;
-        
+
     public:
         Clinic();                                      
         Clinic(string name, int max_size);                                                  
