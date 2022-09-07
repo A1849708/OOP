@@ -8,7 +8,7 @@ using namespace std;
 Clinic::Clinic(){
     count=0;
     size=0;
-    clinicName="vet Hospital";
+    clinicName="";
     Cage* ClinicArray=new int [size];
 }
 
