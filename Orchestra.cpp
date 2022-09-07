@@ -20,7 +20,7 @@ Musician *get_members();
 int Orchestra::get_current_number_of_members(){return size;} 
 
 bool Orchestra::has_instrument(string instrument){
-    for (int i=0;i<size<i++){
+    for (int i=0;i<size;i++){
         if (array[i].get_instrument()==instrument){
             return true;
         }
