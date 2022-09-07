@@ -1,24 +1,26 @@
-#include<string>
-#include <iostream>
+#pragma once
 #include "Musician.h"
-#ifndef ORCHESTRA_H
-#define ORCHESTRA_H
-#include <vector>
-
 using namespace std;
 
-class Orchestra: public Musician{
-    private:
-        int size;
-        int count;
+class Orchestra : public Musician {
+ private:
+  Musician* orchestra;
+  int size;
+  int occupance;
 
-    public:
-        vector<Musician>array;
-        Orchestra();           
-        Orchestra(int group);
-        int get_current_number_of_members(); 
-        bool has_instrument(std::string instrument); 
-        Musician *get_members();
-        bool add_musician(Musician new_musician);
+ public:
+  Orchestra();          
+  Orchestra(int size);  
+  // returns the number of musicians who have joined the orchestra
+  int get_current_number_of_members();
+  // returns true if any musician in the orchestra plays the specified
+  // instrument otherwise returns false
+  bool has_instrument(string instrument);
+  Musician* get_members();  // returns the array of members of the orchestra
+
+  // returns true and adds new musician to the orchestra if the orchestra is not
+  // full otherwise returns false
+  bool add_musician(Musician new_musician);
+    //delete orchestra
+  ~Orchestra();
 };
-#endif

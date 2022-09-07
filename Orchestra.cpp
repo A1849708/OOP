@@ -1,40 +1,47 @@
-#include <iostream>
-#include <string>
 #include "Musician.h"
 #include "Orchestra.h"
-#include <vector>
-
-using namespace std;
 
 Orchestra::Orchestra(){
-    size=0;
-    count=0;
-    array;
-}  
-
-Orchestra::Orchestra(int group){
-    size =group; 
+    size = 0;
+    orchestra = new Musician[size];  
+    occupance = 0;  
 }
 
-Musician *get_members();
-int Orchestra::get_current_number_of_members(){return size;} 
+Orchestra::Orchestra(int _size){
+    size = _size;
+    orchestra = new Musician[size];
+    occupance = 0;
+}
+
+int Orchestra::get_current_number_of_members(){
+    return occupance;
+}
 
 bool Orchestra::has_instrument(string instrument){
-    for (int i=0;i<size;i++){
-        if (array[i].get_instrument()==instrument){
+    for (int i = 0; i < size; i++){
+        if (orchestra[i].get_instrument() == instrument){
             return true;
         }
-        else{
-            return false;
-        }
     }
-};
+    return false;
+}
+
+Musician* Orchestra::get_members(){
+    return orchestra;
+}
+
 bool Orchestra::add_musician(Musician new_musician){
-    if(array.size()==size){
+    if (occupance >= size){
         return false;
+    } else if (occupance < size){
+        *(orchestra + occupance) = new_musician;
+        occupance++;
+        return true;
     }
-    else{
-        array.push_back(new_musician);
-        size++;
-    }
+
+    return true;
+}
+
+Orchestra::~Orchestra(){
+    delete [] orchestra;
 }
