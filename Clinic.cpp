@@ -9,7 +9,7 @@ Clinic::Clinic(){
     count=0;
     size=0;
     clinicName="";
-    Cage* ClinicArray=new int [size];
+    ClinicArray = new Cage [size];
 }
 
 Clinic::Clinic(string name, int max_size){

@@ -10,6 +10,7 @@ class Clinic : public Cage{
         int count;
         int size;
         string clinicName;
+        
     public:
         Clinic();                                      
         Clinic(string name, int max_size);                                                  
